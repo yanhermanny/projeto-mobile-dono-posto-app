@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="projeto_mobile_dono_posto_app.Views.Account.IULoginDonoPosto"
+             Title="IULoginDonoPosto">
+    <ScrollView
+            Grid.Row="1"
+            Padding="20"
+            BackgroundColor="White"
+            VerticalOptions="FillAndExpand">
+        <VerticalStackLayout Spacing="10">
+            <Image Source="dono_posto_logo.png" WidthRequest="150" HeightRequest="150" VerticalOptions="Start" HorizontalOptions="Center" />
+            <Label 
+            Text="Bem vindo!" FontSize="Large"
+            
+            HorizontalOptions="Center" Margin="30, 0" />
+            <Label 
+            Text="Entre na sua conta" Margin="15, 0"
+           
+            HorizontalOptions="Center" />
+
+            <Entry Placeholder="Usuário"   Margin="15, 0"
+           />
+
+            <Entry  Placeholder="Senha" IsPassword="True" Margin="15, 0"
+             />
+            <Button
+            
+            Text="Login" Clicked="Button_Login_Clicked"   Margin="15, 0"
+              />
+            <!--<Border Margin="15" BackgroundColor="Black" Stroke="Transparent" StrokeShape="RoundRectangle 30">
+            <Grid Margin="15,0" RowDefinitions="Auto" ColumnDefinitions="*,30">
+            <Label HorizontalOptions="Center"
+                   Text="Login" Grid.Row="0" Grid.Column="0"></Label> 
+            <Label HorizontalOptions="Center"
+                   Text=">" Grid.Row="0" Grid.Column="1"></Label>
+        </Grid>-->
+            <!--</Border>-->
+            <Label Margin="15, 0" 
+                   Text="" IsVisible="false" ></Label>
+            <Label Margin="15, 0" 
+                   Text="Não tem uma conta? Cadastre-se" HorizontalOptions="Center" ></Label>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
