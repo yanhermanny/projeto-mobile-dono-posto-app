@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="projeto_mobile_dono_posto_app.Views.Login"
+             Title="Login">
+    <VerticalStackLayout>
+        <Label 
+            Text="Login"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label 
+            Text="Login"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+       
+        <Entry Placeholder="Usuário"  VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label 
+            Text="Senha"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Entry  Placeholder="Senha"  VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Button
+            
+            Text="Login" Clicked="Button_Login_Clicked"   
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        
+        <Grid RowDefinitions="Auto" ColumnDefinitions="*,30">
+            <Label HorizontalOptions="Center"
+                   Text="Novo" Grid.Row="0" Grid.Column="0"></Label> 
+            <Label HorizontalOptions="Center"
+                   Text="Novo" Grid.Row="0" Grid.Column="1"></Label>
+        </Grid>
+
+    </VerticalStackLayout>
+</ContentPage>
