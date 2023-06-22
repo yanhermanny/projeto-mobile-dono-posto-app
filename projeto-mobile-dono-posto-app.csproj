@@ -50,6 +50,8 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\dono_posto_logo.png" />
+	  <None Remove="Resources\Images\dono_posto_logo.svg" />
+	  <None Remove="Resources\Images\funcionarios_logo_navbar.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -67,10 +69,16 @@
 	  <MauiXaml Update="Views\Account\IULoginDonoPosto.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\Account\IUPerfil.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Account\IURecuperarSenhaDonoPosto.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Funcionarios\IUListaFuncionarios.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Postos\IUPostos.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

@@ -3,10 +3,68 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="projeto_mobile_dono_posto_app.Views.Funcionarios.IUListaFuncionarios"
              Title="IUListaFuncionarios">
+    <ScrollView>
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+        
+        <Picker Title="Selecione um item"  SelectedIndex="0" HorizontalOptions="Fill" >
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Todos</x:String>
+                    <x:String>Aprovados</x:String>
+                    <x:String>Recusados</x:String>
+                    <x:String>Bloqueados</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <SearchBar Placeholder="Digite aqui" SearchCommand="{Binding SearchCommand}" SearchButtonPressed="OnSearchButtonPressed" />
+
+        <!--<Picker Title="Selecione um item" SelectedItem="{Binding SelectedItem}">
+            --><!-- Itens do Picker --><!--
+        </Picker>-->
+        <ListView x:Name="lvFuncionarios" ItemsSource="{Binding Funcionarios}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0" Text="{Binding Nome}" FontSize="18" />
+                            <Label Grid.Column="1" Text="{Binding NomePosto}" FontSize="16" />
+                            <Label Grid.Column="2" Text="{Binding EnderecoPosto}" FontSize="14" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+            <Grid  VerticalOptions="End">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+
+                    <StackLayout Grid.Column="1" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="End">
+                        <Button Text="Home" TextColor="White" FontSize="16" Margin="10" />
+                        <Button Text="Sobre" TextColor="White" FontSize="16" Margin="10" />
+                        <Button Text="Contato" TextColor="White" FontSize="16" Margin="10" />
+                    </StackLayout>
+                </Grid>
+
+                <!-- Resto do conteúdo da página -->
+            </Grid>
+        </VerticalStackLayout>
+
+    </ScrollView>
+    
 </ContentPage>
