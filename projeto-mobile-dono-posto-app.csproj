@@ -51,7 +51,10 @@
 	<ItemGroup>
 	  <None Remove="Resources\Images\dono_posto_logo.png" />
 	  <None Remove="Resources\Images\dono_posto_logo.svg" />
+	  <None Remove="Resources\Images\funcionarios_logo_navbar.png" />
 	  <None Remove="Resources\Images\funcionarios_logo_navbar.svg" />
+	  <None Remove="Resources\Images\perfil_logo_navbaf.png" />
+	  <None Remove="Resources\Images\postos_logo_navbaf.png" />
 	</ItemGroup>
 
 	<ItemGroup>

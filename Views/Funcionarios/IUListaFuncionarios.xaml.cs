@@ -1,3 +1,4 @@
+using projeto_mobile_dono_posto_app.Views.Account;
 using System.Windows.Input;
 
 namespace projeto_mobile_dono_posto_app.Views.Funcionarios;
@@ -23,7 +24,12 @@ public partial class IUListaFuncionarios : ContentPage
         lvFuncionarios.ItemsSource = funcionarios;
 
 }
-private string selectedItem;
+    private void Btn_Perfil_Navbar_Click(object sender, EventArgs args)
+    {
+        App.Current.MainPage = new IUPerfil();
+
+    }
+    private string selectedItem;
 
     public string SelectedItem
     {

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:controls="clr-namespace:Microsoft.Maui.Controls;assembly=Microsoft.Maui.Controls.ImageButton"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="projeto_mobile_dono_posto_app.Views.Funcionarios.IUListaFuncionarios"
+             
              Title="IUListaFuncionarios">
     <ScrollView>
     <VerticalStackLayout>
@@ -40,7 +42,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-
+            <Border BackgroundColor="WhiteSmoke">
             <Grid  VerticalOptions="End">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="60" />
@@ -55,14 +57,20 @@
 
 
                     <StackLayout Grid.Column="1" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="End">
-                        <Button Text="Home" TextColor="White" FontSize="16" Margin="10" />
-                        <Button Text="Sobre" TextColor="White" FontSize="16" Margin="10" />
-                        <Button Text="Contato" TextColor="White" FontSize="16" Margin="10" />
+                        <!--<Image Source="funcionarios_logo_navbar.svg"></Image>-->
+                            <ImageButton Source="postos_logo_navbaf.png"  Margin="30,0"   VerticalOptions="End" HorizontalOptions="Start" />
+
+                            <ImageButton Source="funcionarios_logo_navbar.png"  Margin="30,0"   VerticalOptions="End" HorizontalOptions="Center" />
+                            <ImageButton Source="perfil_logo_navbaf.png"  Margin="30,0" VerticalOptions="End" HorizontalOptions="End"  Clicked="Btn_Perfil_Navbar_Click"/>
+                       
+                        
+                       
                     </StackLayout>
                 </Grid>
 
                 <!-- Resto do conteúdo da página -->
             </Grid>
+            </Border>
         </VerticalStackLayout>
 
     </ScrollView>
