@@ -13,12 +13,12 @@ public partial class IUListaFuncionarios : ContentPage
 	
         List<Funcionario> funcionarios = new List<Funcionario>()
             {
-                new Funcionario { Nome = "João", NomePosto = "POSTO 1", EnderecoPosto = "RUA Tecnologia" },
-                new Funcionario { Nome = "Maria", NomePosto = "POSTO 1", EnderecoPosto = "RUA Design" },
-                new Funcionario { Nome = "Pedro", NomePosto = "POSTO 1", EnderecoPosto = "RUA Gestão" },
-                new Funcionario { Nome = "Pedro", NomePosto = "POSTO 1", EnderecoPosto = "RUA Gestão" },
-                new Funcionario { Nome = "Pedro", NomePosto = "POSTO 1", EnderecoPosto = "RUA Gestão" },
-                new Funcionario { Nome = "Pedro", NomePosto = "POSTO 1", EnderecoPosto = "RUA Gestão" }
+                new Funcionario { Nome = "João", NomePosto = "POSTO 1", EnderecoPosto = "RUA Tecnologia" , DtRequisicao = "Requisitado dia 13/05/2023 ás 16:45"},
+                new Funcionario { Nome = "Maria", NomePosto = "POSTO 1", EnderecoPosto = "RUA Design", DtRequisicao = "Requisitado dia 13/05/2023 ás 16:45"},
+                new Funcionario { Nome = "Pedro", NomePosto = "POSTO 1", EnderecoPosto = "RUA Gestão", DtRequisicao = "Requisitado dia 13/05/2023 ás 16:45" },
+                new Funcionario { Nome = "Pedro", NomePosto = "POSTO 1", EnderecoPosto = "RUA Gestão",DtRequisicao = "Requisitado dia 13/05/2023 ás 16:45"},
+                new Funcionario { Nome = "Pedro", NomePosto = "POSTO 1", EnderecoPosto = "RUA Gestão", DtRequisicao = "Requisitado dia 13/05/2023 ás 16:45" },
+                new Funcionario { Nome = "Pedro", NomePosto = "POSTO 1", EnderecoPosto = "RUA Gestão", DtRequisicao = "Requisitado dia 13/05/2023 ás 16:45" }
             };
 
         lvFuncionarios.ItemsSource = funcionarios;
@@ -28,7 +28,36 @@ public partial class IUListaFuncionarios : ContentPage
     {
         App.Current.MainPage = new IUPerfil();
 
+    }private void Btn_Postos_Navbar_Click(object sender, EventArgs args)
+    {
+        App.Current.MainPage = new IULoginDonoPosto();
+
+    }private void Btn_Funcionarios_Navbar_Click(object sender, EventArgs args)
+    {
+        App.Current.MainPage = new IUListaFuncionarios();
+
     }
+    private void BtnAprovarFuncionario_Click(object sender, EventArgs args)
+    {
+        App.Current.MainPage = new IUListaFuncionarios();
+
+    }
+    private void BtnRecusarFuncionario_Click(object sender, EventArgs args)
+    {
+        App.Current.MainPage = new IUListaFuncionarios();
+
+    }
+     private void BtnBloquearFuncionario_Click(object sender, EventArgs args)
+    {
+        App.Current.MainPage = new IUListaFuncionarios();
+
+    }
+     private void BtnDesbloquearFuncionario_Click(object sender, EventArgs args)
+    {
+        App.Current.MainPage = new IUListaFuncionarios();
+
+    }
+
     private string selectedItem;
 
     public string SelectedItem
@@ -45,11 +74,12 @@ public partial class IUListaFuncionarios : ContentPage
         // Lógica de pesquisa aqui
     }
     public class Funcionario
-{
-    public string Nome { get; set; }
-    public string NomePosto { get; set; }
-    public string EnderecoPosto { get; set; }
-}
+    {
+        public string Nome { get; set; }
+        public string NomePosto { get; set; }
+        public string EnderecoPosto { get; set; }
+        public string DtRequisicao { get; set; }
+    }
     private void OnSearchButtonPressed(object sender, EventArgs e)
     {
         var searchBar = (SearchBar)sender;

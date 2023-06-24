@@ -55,6 +55,8 @@
 	  <None Remove="Resources\Images\funcionarios_logo_navbar.svg" />
 	  <None Remove="Resources\Images\perfil_logo_navbaf.png" />
 	  <None Remove="Resources\Images\postos_logo_navbaf.png" />
+	  <None Remove="Resources\Images\vector.png" />
+	  <None Remove="Resources\Images\vector.svg" />
 	</ItemGroup>
 
 	<ItemGroup>

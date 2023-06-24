@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:controls="clr-namespace:Microsoft.Maui.Controls;assembly=Microsoft.Maui.Controls.ImageButton"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+ xmlns:controls="clr-namespace:Microsoft.Maui.Controls;assembly=Microsoft.Maui.Controls"             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="projeto_mobile_dono_posto_app.Views.Funcionarios.IUListaFuncionarios"
              
              Title="IUListaFuncionarios">
     <ScrollView>
     <VerticalStackLayout>
         
-        <Picker Title="Selecione um item"  SelectedIndex="0" HorizontalOptions="Fill" >
+        <Picker Title="Selecione um item"  SelectedIndex="0" HorizontalOptions="CenterAndExpand" >
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
                     <x:String>Todos</x:String>
@@ -18,25 +17,88 @@
                 </x:Array>
             </Picker.ItemsSource>
         </Picker>
-        <SearchBar Placeholder="Digite aqui" SearchCommand="{Binding SearchCommand}" SearchButtonPressed="OnSearchButtonPressed" />
+        <SearchBar 
+            Placeholder="Digite aqui" 
+            SearchCommand="{Binding SearchCommand}" 
+            SearchButtonPressed="OnSearchButtonPressed" />
 
         <!--<Picker Title="Selecione um item" SelectedItem="{Binding SelectedItem}">
             --><!-- Itens do Picker --><!--
         </Picker>-->
-        <ListView x:Name="lvFuncionarios" ItemsSource="{Binding Funcionarios}">
+        <ListView 
+            x:Name="lvFuncionarios" 
+            ItemsSource="{Binding Funcionarios}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <Grid>
-                            <Grid.ColumnDefinitions>
+                            <Grid.ColumnDefinitions>                               
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
 
-                            <Label Grid.Column="0" Text="{Binding Nome}" FontSize="18" />
-                            <Label Grid.Column="1" Text="{Binding NomePosto}" FontSize="16" />
-                            <Label Grid.Column="2" Text="{Binding EnderecoPosto}" FontSize="14" />
+
+                                <Label 
+                                    Grid.Column="0" 
+                                    Text="{Binding Nome}" 
+                                    FontSize="14" />
+                                <Label 
+                                    Grid.Column="1" 
+                                    FontSize="14">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="{Binding NomePosto}" />
+                                            <Span Text=" " />
+                                            <Span Text="{Binding EnderecoPosto}" />
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+
+                              
+                             
+                                <Label 
+                                    Grid.Column="2" 
+                                    Text="{Binding DtRequisicao}" 
+                                    FontSize="14" />
+                            
+                                <Button 
+                                    x:Name="BtnAprovarFuncionario" 
+                                    TextColor="Green" 
+                                    Text="Aprovar" 
+                                    Grid.Column="3" 
+                                    BackgroundColor="Transparent" 
+                                    BorderColor="Green"  
+                                    Clicked="BtnAprovarFuncionario_Click"/>
+                            
+                                <Button x:Name="BtnRecusarFuncionario" 
+                                        TextColor="Red" 
+                                        Text="Recusar" 
+                                        Grid.Column="4"  
+                                        BackgroundColor="Transparent" 
+                                        BorderColor="Red"  
+                                        Clicked="BtnRecusarFuncionario_Click"/>
+                            
+                                <Button x:Name="BtnBloquearFuncionario" 
+                                        IsVisible="false"  
+                                        TextColor="Red" 
+                                        Text="Recusar" 
+                                        Grid.Column="4"  
+                                        BackgroundColor="Transparent" 
+                                        BorderColor="Red" 
+                                        Clicked="BtnBloquearFuncionario_Click"/>
+                            
+                                <Button x:Name="BtnDesbloquearFuncionario" 
+                                        IsVisible="false" 
+                                        TextColor="Red" 
+                                        Text="Recusar" 
+                                        Grid.Column="4"  
+                                        BackgroundColor="Transparent" 
+                                        BorderColor="Red"  
+                                        Clicked="BtnDesbloquearFuncionario_Click"/>
+                            <!--<Label Grid.Column="3" Text="{Binding DtRequisicao}" FontSize="14" />-->
                         </Grid>
                     </ViewCell>
                 </DataTemplate>
@@ -58,9 +120,10 @@
 
                     <StackLayout Grid.Column="1" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="End">
                         <!--<Image Source="funcionarios_logo_navbar.svg"></Image>-->
-                            <ImageButton Source="postos_logo_navbaf.png"  Margin="30,0"   VerticalOptions="End" HorizontalOptions="Start" />
+                            <ImageButton Source="postos_logo_navbaf.png"  Margin="30,0"   VerticalOptions="End" HorizontalOptions="Start"  Clicked="Btn_Postos_Navbar_Click" />
 
-                            <ImageButton Source="funcionarios_logo_navbar.png"  Margin="30,0"   VerticalOptions="End" HorizontalOptions="Center" />
+                            <ImageButton Source="funcionarios_logo_navbar.png"  Margin="30,0"   VerticalOptions="End" HorizontalOptions="Center"   Clicked="Btn_Funcionarios_Navbar_Click"/>
+                        
                             <ImageButton Source="perfil_logo_navbaf.png"  Margin="30,0" VerticalOptions="End" HorizontalOptions="End"  Clicked="Btn_Perfil_Navbar_Click"/>
                        
                         
