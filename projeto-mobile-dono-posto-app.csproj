@@ -49,7 +49,43 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\dono_posto_logo.png" />
+	  <None Remove="Resources\Images\dono_posto_logo.svg" />
+	  <None Remove="Resources\Images\funcionarios_logo_navbar.png" />
+	  <None Remove="Resources\Images\funcionarios_logo_navbar.svg" />
+	  <None Remove="Resources\Images\perfil_logo_navbaf.png" />
+	  <None Remove="Resources\Images\postos_logo_navbaf.png" />
+	  <None Remove="Resources\Images\vector.png" />
+	  <None Remove="Resources\Images\vector.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Views\Liquido\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Views\Account\IUCadastroDonoPosto.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Account\IULoginDonoPosto.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Account\IUPerfil.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Account\IURecuperarSenhaDonoPosto.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Funcionarios\IUListaFuncionarios.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Postos\IUPostos.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>

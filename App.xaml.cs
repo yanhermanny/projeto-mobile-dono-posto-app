@@ -1,4 +1,6 @@
-﻿namespace projeto_mobile_dono_posto_app;
+﻿using projeto_mobile_dono_posto_app.Views.Account;
+
+namespace projeto_mobile_dono_posto_app;
 
 public partial class App : Application
 {
@@ -6,6 +8,6 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new AppShell();
+		MainPage = new IULoginDonoPosto();
 	}
 }
