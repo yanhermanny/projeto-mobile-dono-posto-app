@@ -104,7 +104,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-            <Border BackgroundColor="WhiteSmoke">
+           
             <Grid  VerticalOptions="End">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="60" />
@@ -120,20 +120,18 @@
 
                     <StackLayout Grid.Column="1" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="End">
                         <!--<Image Source="funcionarios_logo_navbar.svg"></Image>-->
-                            <ImageButton Source="postos_logo_navbaf.png"  Margin="30,0"   VerticalOptions="End" HorizontalOptions="Start"  Clicked="Btn_Postos_Navbar_Click" />
+                            <ImageButton Source="postos_logo_navbaf.png"  Margin="4,0"   VerticalOptions="End" HorizontalOptions="Start"  Clicked="Btn_Postos_Navbar_Click" />
 
-                            <ImageButton Source="funcionarios_logo_navbar.png"  Margin="30,0"   VerticalOptions="End" HorizontalOptions="Center"   Clicked="Btn_Funcionarios_Navbar_Click"/>
+                            <ImageButton Source="funcionarios_logo_navbar.png"  Margin="4,0"   VerticalOptions="End" HorizontalOptions="Center"   Clicked="Btn_Funcionarios_Navbar_Click"/>
                         
-                            <ImageButton Source="perfil_logo_navbaf.png"  Margin="30,0" VerticalOptions="End" HorizontalOptions="End"  Clicked="Btn_Perfil_Navbar_Click"/>
+                            <ImageButton Source="perfil_logo_navbaf.png"  Margin="4,0" VerticalOptions="End" HorizontalOptions="End"  Clicked="Btn_Perfil_Navbar_Click"/>
                        
                         
                        
                     </StackLayout>
                 </Grid>
 
-                <!-- Resto do conteúdo da página -->
             </Grid>
-            </Border>
         </VerticalStackLayout>
 
     </ScrollView>

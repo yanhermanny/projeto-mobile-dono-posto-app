@@ -16,6 +16,10 @@ public partial class IULoginDonoPosto : ContentPage
     {
         App.Current.MainPage = new IUListaFuncionarios();
     }
+    private void Button_Recuperar_Senha_Clicked(object sender, EventArgs e)
+    {
+        App.Current.MainPage = new IURecuperarSenhaDonoPosto();
+    }
     private void AbrirPagina(string pagina)
     { 
         App.Current.MainPage = new IUCadastroDonoPosto();

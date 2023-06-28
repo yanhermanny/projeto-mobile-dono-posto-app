@@ -1,12 +1,58 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:Microsoft.Maui.Controls;assembly=Microsoft.Maui.Controls"
              x:Class="projeto_mobile_dono_posto_app.Views.Account.IURecuperarSenhaDonoPosto"
              Title="IURecuperarSenhaDonoPosto">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
+    
+    <ScrollView
+            Grid.Row="1"
+            Padding="20"
+            BackgroundColor="White"
+            VerticalOptions="FillAndExpand">
+        <VerticalStackLayout Spacing="10">
+            <Image Source="dono_posto_logo.png" WidthRequest="150" HeightRequest="150" VerticalOptions="Start" HorizontalOptions="Center" />
+            <Label 
+            Text="Redefinir Senha" FontSize="Large"
+            
+            HorizontalOptions="Center" Margin="30, 0" />
+            <Label 
+            Text="Digite seu email" Margin="15, 0"
+           
             HorizontalOptions="Center" />
-    </VerticalStackLayout>
+
+            <Entry Placeholder="Email"   Margin="15, 0"
+           />
+
+            
+            <Button
+            
+            Text="Enviar" Clicked="Button_Recuperar_Senha_Clicked"   Margin="15, 0"
+              />
+            <!--<Border Margin="15" BackgroundColor="Black" Stroke="Transparent" StrokeShape="RoundRectangle 30">
+            <Grid Margin="15,0" RowDefinitions="Auto" ColumnDefinitions="*,30">
+            <Label HorizontalOptions="Center"
+                   Text="Login" Grid.Row="0" Grid.Column="0"></Label> 
+            <Label HorizontalOptions="Center"
+                   Text=">" Grid.Row="0" Grid.Column="1"></Label>
+        </Grid>-->
+            <!--</Border>-->
+            <controls:Label>
+                <!--<controls:Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Não tem uma conta? " />
+                        <Span Text="Cadastre-se" TextDecorations="Underline" TextColor="Blue">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AbrirPaginaCommand}" CommandParameter="IUCadastroDonoPosto" />
+                            </Span.GestureRecognizers>
+                        </Span>
+
+                    </FormattedString>
+                </controls:Label.FormattedText>-->
+            </controls:Label>
+            <Label  Margin="15, 0" 
+                   Text="" IsVisible="false" ></Label>
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
