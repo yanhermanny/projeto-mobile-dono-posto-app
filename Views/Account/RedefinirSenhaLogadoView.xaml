@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="projeto_mobile_dono_posto_app.Views.Account.RedefinirSenhaLogadoView"
+             Title="RedefinirSenhaLogadoView">
+    <ScrollView
+            Grid.Row="1"
+            Padding="20"
+            BackgroundColor="White"
+            VerticalOptions="FillAndExpand">
+        <VerticalStackLayout Spacing="10">
+            
+                <ImageButton Source="voltar_logo.png" MaximumWidthRequest="20" MaximumHeightRequest="20" VerticalOptions="Start" HorizontalOptions="Start"  Clicked="BtnVoltar_Click"  />
+            <Image Source="dono_posto_logo.png" WidthRequest="150" HeightRequest="150" VerticalOptions="Start" HorizontalOptions="Center" />
+           
+
+                <Label 
+            Text="Redefinir Senha" FontSize="Large"
+            
+            HorizontalOptions="Center" Margin="30, 0" />
+            <Label 
+            Text="Uma mensagem foi enviada para gabriel@gmail.com" Margin="15, 0"
+           
+            HorizontalOptions="Center" />
+                  
+
+
+           
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

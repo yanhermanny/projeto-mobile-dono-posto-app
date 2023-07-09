@@ -39,21 +39,37 @@
                 Clicked="Button_Login_Clicked"  
                 Margin="15, 0"/>
            
-            <controls:Label>
+            <!--<controls:Label>
                 <controls:Label.FormattedText>
                     <FormattedString>
                         <Span Text="Não tem uma conta? " />
-                        <Span Text="Cadastre-se" TextDecorations="Underline" TextColor="Blue">
+                        --><!--<Span Text="Cadastre-se" TextDecorations="Underline" TextColor="Blue">
                             <Span.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding AbrirPaginaCommand}" CommandParameter="IUCadastroDonoPosto" />
                             </Span.GestureRecognizers>
-                        </Span>
+                        </Span>--><!--
                       
                     </FormattedString>
                 </controls:Label.FormattedText>
-            </controls:Label>
+            </controls:Label>-->
+
+            <HorizontalStackLayout>
+                <Label Text="Não tem uma conta?" HorizontalOptions="Start" Margin="1,15"></Label>
+                <Button x:Name="btnCadastro"
+                    Text="Cadastre-se" 
+                    HorizontalOptions="Start"
+                    TextColor="Blue" 
+                    BackgroundColor="Transparent"
+                    BorderColor="Transparent"
+                    Clicked="Button_Cadastro_Clicked"
+                    BorderWidth="0"
+                    Margin="0"
+                    Padding="0"/>
+                
+            </HorizontalStackLayout>
+            
             <Label  Margin="15, 0" 
-                   Text="" IsVisible="false" ></Label>
+                   Text="Email não cadastrado" IsVisible="false" ></Label>
          
         </VerticalStackLayout>
     </ScrollView>

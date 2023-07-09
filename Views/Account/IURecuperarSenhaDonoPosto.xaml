@@ -11,6 +11,8 @@
             BackgroundColor="White"
             VerticalOptions="FillAndExpand">
         <VerticalStackLayout Spacing="10">
+            <ImageButton Source="voltar_logo.png" MaximumWidthRequest="20" MaximumHeightRequest="20" VerticalOptions="Start" HorizontalOptions="Start"  Clicked="BtnVoltar_Click"  />
+
             <Image Source="dono_posto_logo.png" WidthRequest="150" HeightRequest="150" VerticalOptions="Start" HorizontalOptions="Center" />
             <Label 
             Text="Redefinir Senha" FontSize="Large"

@@ -4,10 +4,12 @@
              x:Class="projeto_mobile_dono_posto_app.Views.Funcionarios.IUListaFuncionarios"
              
              Title="IUListaFuncionarios">
+    
     <ScrollView>
+        
     <VerticalStackLayout>
         
-        <Picker Title="Selecione um item"  SelectedIndex="0" HorizontalOptions="CenterAndExpand" >
+        <Picker Title="Selecione um item"  SelectedIndex="0" >
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
                     <x:String>Todos</x:String>
@@ -62,7 +64,7 @@
                                 <Label 
                                     Grid.Column="2" 
                                     Text="{Binding DtRequisicao}" 
-                                    FontSize="14" />
+                                    FontSize="14"  />
                             
                                 <Button 
                                     x:Name="BtnAprovarFuncionario" 
@@ -122,7 +124,7 @@
                         <!--<Image Source="funcionarios_logo_navbar.svg"></Image>-->
                             <ImageButton Source="postos_logo_navbaf.png"  Margin="4,0"   VerticalOptions="End" HorizontalOptions="Start"  Clicked="Btn_Postos_Navbar_Click" />
 
-                            <ImageButton Source="funcionarios_logo_navbar.png"  Margin="4,0"   VerticalOptions="End" HorizontalOptions="Center"   Clicked="Btn_Funcionarios_Navbar_Click"/>
+                        <ImageButton Source="logo_f_navbarfuncionarios.png"  Margin="4,0"   VerticalOptions="End" HorizontalOptions="Center"   Clicked="Btn_Funcionarios_Navbar_Click"/>
                         
                             <ImageButton Source="perfil_logo_navbaf.png"  Margin="4,0" VerticalOptions="End" HorizontalOptions="End"  Clicked="Btn_Perfil_Navbar_Click"/>
                        
@@ -132,8 +134,12 @@
                 </Grid>
 
             </Grid>
+            
         </VerticalStackLayout>
+
 
     </ScrollView>
     
 </ContentPage>
+    
+    

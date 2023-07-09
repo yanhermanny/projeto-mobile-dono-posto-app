@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="projeto_mobile_dono_posto_app.Views.Account.IUCadastroDonoPosto"
-             Title="IUCadastroDonoPosto">
+             x:Class="projeto_mobile_dono_posto_app.Views.Account.EditarDonoPostoview"
+             Title="EditarDonoPostoview">
     <ScrollView
             Grid.Row="1"
             Padding="20"
@@ -12,47 +12,47 @@
             <ImageButton Source="voltar_logo.png" MaximumWidthRequest="20" MaximumHeightRequest="20" VerticalOptions="Start" HorizontalOptions="Start"  Clicked="BtnVoltar_Click"  />
 
             <Label 
-            Text="Registre-se"
+            Text="Editar Perfil"
             Margin="30"
-            VerticalOptions="Center" 
+            VerticalOptions="Start" 
             HorizontalOptions="Center" FontSize="Large" />
-        
-         <Label 
+
+            <Label 
             Text="Nome"
              Margin="15"
             VerticalOptions="Center" 
             HorizontalOptions="Start" />
-        
-        
-        <Entry 
+
+
+            <Entry 
             x:Name="nomeDonoPosto"
             Margin="15"
             Placeholder="Ex: Machado de Assis"/>
-        
-        
-        <Label 
+
+
+            <Label 
             Text="Email*"
             VerticalOptions="Center" 
             HorizontalOptions="Start" 
             Margin="15"/>
-        
-        <Entry 
+
+            <Entry 
             x:Name="emailDonoPosto"
             Margin="15"
             Placeholder="Ex: Email@email.com"/>
-        
-        <Label 
+
+            <Label 
             Text="CPF ou CNPJ*"
             VerticalOptions="Center" 
             HorizontalOptions="Start" 
             Margin="15"/>
-        
-        <Entry 
+
+            <Entry 
             x:Name="cpf_cnpjDonoPosto"
             Margin="15"
             Placeholder="Digite CNPJ"/>
-        
-        <Label 
+
+            <Label 
             Text="Escolha qual acesso será usado para fazer login:"
             VerticalOptions="Center" 
             HorizontalOptions="Start" 
@@ -68,91 +68,91 @@
                     Content="CNPJ"                    
                     Margin="15"/>
             </HorizontalStackLayout>
-            
 
-        <Label 
+
+            <Label 
             Text="Senha*"
             VerticalOptions="Center" 
             HorizontalOptions="Start" 
             Margin="15"/>
-        <Entry 
+            <Entry 
             x:Name="senhaDonoPosto"
             IsPassword="True"
             Placeholder="Deve conter 6 digitos"
             Margin="15"/>
 
-        <Label 
+            <Label 
             Text="Confirmar Senha*"
             VerticalOptions="Center" 
             HorizontalOptions="Start" 
             Margin="15"/>
-        <Entry 
+            <Entry 
             x:Name="confirmarSenhaDonoPosto"
             IsPassword="True"
             Placeholder="Repita a senha"
             Margin="15"/>
-        
-        <Label 
+
+            <Label 
             Text="CEP*"
             VerticalOptions="Center" 
             HorizontalOptions="Start"
             Margin="15"/>
-        <Entry 
+            <Entry 
             x:Name="cepDonoPosto"
             Placeholder="cep"
             Margin="15"/>
 
-        <Label 
+            <Label 
             Text="Rua"
             VerticalOptions="Center" 
             HorizontalOptions="Start" 
             Margin="15"/>
-        <Entry 
+            <Entry 
             x:Name="ruaEnderecoDonoPosto"
             Placeholder="Rua"
             IsReadOnly="True"
             Margin="15"/>
-        
-        <Label 
+
+            <Label 
             Text="Numero*"
             VerticalOptions="Center" 
             HorizontalOptions="Start"
             Margin="15"/>
-        <Entry 
+            <Entry 
             x:Name="numeroEnderecoDonoPosto"
             Placeholder="Numero do logradouro"
             Margin="15"/>
 
 
-        <Label 
+            <Label 
             Text="Cidade"
             VerticalOptions="Center" 
             HorizontalOptions="Start" 
             Margin="15"/>
-        <Entry 
+            <Entry 
             x:Name="cidadeEnderecoDonoPosto"
             Placeholder="Cidade"
             IsReadOnly="True"
             Margin="15"/>
 
-        <Label 
+            <Label 
             Text="UF"
             VerticalOptions="Center" 
             HorizontalOptions="Start" 
             Margin="15"/>
-        <Entry 
+            <Entry 
             x:Name="ufEnderecoDonoPosto"
             Placeholder="UF"
             IsReadOnly="True"
             Margin="15"/>
-        
-        <Button 
+
+            <Button 
             x:Name="btnContinuar"
-            Text="Continuar"
+            Text="Salvar"
             Margin="15"
             Clicked="Button_Continuar_Clicked"/>
 
 
-    </VerticalStackLayout>
+        </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
