@@ -53,10 +53,26 @@
 	  <None Remove="Resources\Images\dono_posto_logo.svg" />
 	  <None Remove="Resources\Images\funcionarios_logo_navbar.png" />
 	  <None Remove="Resources\Images\funcionarios_logo_navbar.svg" />
+	  <None Remove="Resources\Images\gota_meuposto.png" />
+	  <None Remove="Resources\Images\logo_funcionario_navbarperfil.png" />
+	  <None Remove="Resources\Images\logo_funcionario_navbarperfil.svg" />
+	  <None Remove="Resources\Images\logo_f_navbarfuncionarios.png" />
+	  <None Remove="Resources\Images\logo_meuoerfil.svg" />
+	  <None Remove="Resources\Images\logo_meuperfil.png" />
+	  <None Remove="Resources\Images\logo_perfil_navbarfuncionario.svg" />
+	  <None Remove="Resources\Images\logo_perfil_navbarfuncionarios.png" />
+	  <None Remove="Resources\Images\logo_perfil_navbarperfil.png" />
+	  <None Remove="Resources\Images\logo_perfil_navbarperfil.svg" />
 	  <None Remove="Resources\Images\perfil_logo_navbaf.png" />
+	  <None Remove="Resources\Images\perfil_logo_navbarposto.png" />
+	  <None Remove="Resources\Images\perfil_logo_navbarposto.svg" />
 	  <None Remove="Resources\Images\postos_logo_navbaf.png" />
+	  <None Remove="Resources\Images\postos_logo_navbarposto.png" />
+	  <None Remove="Resources\Images\postos_logo_navbarposto.svg" />
 	  <None Remove="Resources\Images\vector.png" />
 	  <None Remove="Resources\Images\vector.svg" />
+	  <None Remove="Resources\Images\voltar_logo.png" />
+	  <None Remove="Resources\Images\voltar_logo.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -68,6 +84,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\Account\CadastroPostoView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Account\EditarDonoPostoview.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Account\EditarPostoview.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Account\IUCadastroDonoPosto.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -78,6 +103,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Account\IURecuperarSenhaDonoPosto.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Account\RedefinirSenhaLogadoView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Funcionarios\IUListaFuncionarios.xaml">

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="projeto_mobile_dono_posto_app.Views.Account.EditarPostoview"
+             Title="EditarPostoview">
+    <ScrollView
+            Grid.Row="1"
+            Padding="20"
+            BackgroundColor="White"
+            VerticalOptions="FillAndExpand">
+        <VerticalStackLayout>
+
+            <HorizontalStackLayout>
+                <ImageButton
+                Source="gota_meuposto.png"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                MaximumHeightRequest="20"
+                MaximumWidthRequest="20" />
+                <Label 
+            Text="Meu Posto"
+            Margin="30"
+            VerticalOptions="Start" 
+            HorizontalOptions="Center" FontSize="Large" />
+            </HorizontalStackLayout>
+
+            <Label 
+            Text="Nome do posto"
+             Margin="15"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start" />
+
+
+            <Entry 
+            x:Name="nomePosto"
+            Margin="15"
+            Placeholder="Digite o nome do posto"/>
+
+
+            <Label 
+            Text="CNPJ*"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start" 
+            Margin="15"/>
+
+            <Entry 
+            x:Name="cnpjPosto"
+            Margin="15"
+            Placeholder="Digite CNPJ"/>
+
+
+
+            <Label 
+            Text="CEP*"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start"
+            Margin="15"/>
+            <Entry 
+            x:Name="cepPosto"
+            Placeholder="cep"
+            Margin="15"/>
+
+            <Label 
+            Text="Rua"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start" 
+            Margin="15"/>
+            <Entry 
+            x:Name="ruaEnderecoPosto"
+            Placeholder="Rua"
+            IsReadOnly="True"
+            Margin="15"/>
+
+            <Label 
+            Text="Numero*"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start"
+            Margin="15"/>
+            <Entry 
+            x:Name="numeroEnderecoPosto"
+            Placeholder="Numero do logradouro"
+            Margin="15"/>
+
+            <Button Text="+ Selecionar Liquidos" Clicked="Button_Clicked"  />
+            <ListView x:Name="listView"
+                  IsVisible="False"
+                  SelectionMode="None"
+                  ItemSelected="ListView_ItemSelected">
+                <ListView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String >Oleo de cozinha</x:String>
+                        <x:String>Oleo de carro</x:String>
+                    </x:Array>
+                </ListView.ItemsSource>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <CheckBox IsChecked="{Binding IsSelected, Mode=TwoWay}" />
+                                <Label Text="{Binding}" VerticalOptions="Center" />
+                                <Entry x:Name="EntryQtdLiquido" Placeholder="Quantidade Liquido" Text="{Binding Text}" VerticalOptions="Center" Keyboard="Numeric" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Label 
+            Text="Cidade"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start" 
+            Margin="15"/>
+            <Entry 
+            x:Name="cidadeEnderecoPosto"
+            Placeholder="Cidade"
+            IsReadOnly="True"
+            Margin="15"/>
+
+            <Label 
+            Text="UF"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start" 
+            Margin="15"/>
+            <Entry 
+            x:Name="ufEnderecoPosto"
+            Placeholder="UF"
+            IsReadOnly="True"
+            Margin="15"/>
+
+            <Button 
+            x:Name="btnCadastrar"
+            Text="Salvar"
+            Margin="15"
+            Clicked="btnCadastrar_Clicked"/>
+            
+            <Grid  VerticalOptions="End">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+
+                    <StackLayout Grid.Column="1" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="End">
+                        <!--<Image Source="funcionarios_logo_navbar.svg"></Image>-->
+                        <ImageButton Source="postos_logo_navbarposto.png"  Margin="4,0"   VerticalOptions="End" HorizontalOptions="Start"  Clicked="Btn_Postos_Navbar_Click" />
+
+                        <ImageButton Source="logo_funcionario_navbarperfil.png"  Margin="4,0"   VerticalOptions="End" HorizontalOptions="Center"   Clicked="Btn_Funcionarios_Navbar_Click"/>
+
+                        <ImageButton Source="perfil_logo_navbarposto.png"  Margin="4,0" VerticalOptions="End" HorizontalOptions="End"  Clicked="Btn_Perfil_Navbar_Click"/>
+
+
+
+                    </StackLayout>
+                </Grid>
+
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+    
+</ContentPage>
