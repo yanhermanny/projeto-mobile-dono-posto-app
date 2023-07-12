@@ -3,54 +3,61 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="projeto_mobile_dono_posto_app.Views.Account.IUPerfil"
              Title="IUPerfil">
-    <VerticalStackLayout>
-        <Label 
+    <ScrollView>
+
+        <VerticalStackLayout>
+            <Label 
             Text="Meu Perfil"
             VerticalOptions="Start" 
             HorizontalOptions="Center"  
-            FontSize="Large"/>
-        <Image 
+            FontSize="Large"
+                Margin="5,5"/>
+            <Image 
             Source="logo_meuperfil.png" 
             WidthRequest="150" 
             HeightRequest="150" 
             VerticalOptions="Start" 
-            HorizontalOptions="Center" />
-        <Label x:Name="LblNomeUsuario"
+            HorizontalOptions="Center"
+                 Margin="5,5"/>
+            <Label x:Name="LblNomeUsuario"
                Text="Gabriel Rodrigues"
-               HorizontalOptions="Center">
-            
-        </Label>
-        <Button x:Name="BtnDashboard" Text="Dashboard" Clicked="Btn_Dashboard_Click"></Button>
-        <Button x:Name="BtnEditar" Text="Editar Perfil" Clicked="Btn_Editar_Click"></Button>
-        <Button x:Name="BtnRedefinir" Text="Redefinir Senha" Clicked="Btn_Redefinir_Click"></Button>
-        <Button x:Name="BtnSair" Text="Sair da Conta" Clicked="Btn_Sair_Click"></Button>
-        <Grid  VerticalOptions="End">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="60" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
+               HorizontalOptions="Center"
+                    Margin="5,5">
 
-            <Grid >
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
+            </Label>
+            <Button x:Name="BtnDashboard" Text="Dashboard" Clicked="Btn_Dashboard_Click"   Margin="5,5"></Button>
+            <Button x:Name="BtnEditar" Text="Editar Perfil" Clicked="Btn_Editar_Click"   Margin="5,5"></Button>
+                    <Button x:Name="BtnRedefinir" Text="Redefinir Senha" Clicked="Btn_Redefinir_Click"   Margin="5,5"></Button>
+                        <Button x:Name="BtnSair" Text="Sair da Conta" Clicked="Btn_Sair_Click"   Margin="5,5"></Button>
+            <Grid  VerticalOptions="End">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="*" />
+                    
+                </Grid.RowDefinitions>
 
-
-                <StackLayout Grid.Column="1" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="End">
-                    <!--<Image Source="funcionarios_logo_navbar.svg"></Image>-->
-                    <ImageButton Source="postos_logo_navbaf.png"  Margin="4,0"   VerticalOptions="End" HorizontalOptions="Start"  Clicked="Btn_Postos_Navbar_Click" />
-
-                    <ImageButton Source="logo_funcionario_navbarperfil.png"  Margin="4,0"   VerticalOptions="End" HorizontalOptions="Center"   Clicked="Btn_Funcionarios_Navbar_Click"/>
-
-                    <ImageButton Source="logo_perfil_navbarperfil.png"  Margin="4,0" VerticalOptions="End" HorizontalOptions="End"  Clicked="Btn_Perfil_Navbar_Click"/>
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
 
 
+                    <StackLayout Grid.Column="1" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="End">
+                        <!--<Image Source="funcionarios_logo_navbar.svg"></Image>-->
+                        <ImageButton Source="postos_logo_navbaf.png"  Margin="4,0"   VerticalOptions="End" HorizontalOptions="Start"  Clicked="Btn_Postos_Navbar_Click" />
 
-                </StackLayout>
+                        <ImageButton Source="logo_funcionario_navbarperfil.png"  Margin="4,0"   VerticalOptions="End" HorizontalOptions="Center"   Clicked="Btn_Funcionarios_Navbar_Click"/>
+
+                        <ImageButton Source="logo_perfil_navbarperfil.png"  Margin="4,0" VerticalOptions="End" HorizontalOptions="End"  Clicked="Btn_Perfil_Navbar_Click"/>
+
+
+
+                    </StackLayout>
+                </Grid>
+
             </Grid>
 
-        </Grid>
-
-    </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

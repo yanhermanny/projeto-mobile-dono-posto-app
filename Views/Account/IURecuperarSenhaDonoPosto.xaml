@@ -8,7 +8,6 @@
     <ScrollView
             Grid.Row="1"
             Padding="20"
-            BackgroundColor="White"
             VerticalOptions="FillAndExpand">
         <VerticalStackLayout Spacing="10">
             <ImageButton Source="voltar_logo.png" MaximumWidthRequest="20" MaximumHeightRequest="20" VerticalOptions="Start" HorizontalOptions="Start"  Clicked="BtnVoltar_Click"  />
@@ -18,16 +17,16 @@
             Text="Redefinir Senha" FontSize="Large"
             
             HorizontalOptions="Center" Margin="30, 0" />
-            <Label 
+            <Label x:Name="lblMsgDigiteEmail"
             Text="Digite seu email" Margin="15, 0"
            
             HorizontalOptions="Center" />
 
-            <Entry Placeholder="Email"   Margin="15, 0"
+            <Entry x:Name="EntryEmail" Placeholder="Email"   Margin="15, 0"
            />
 
             
-            <Button
+            <Button x:Name="btnRecuperar"
             
             Text="Enviar" Clicked="Button_Recuperar_Senha_Clicked"   Margin="15, 0"
               />

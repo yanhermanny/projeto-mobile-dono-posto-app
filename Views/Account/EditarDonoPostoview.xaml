@@ -6,7 +6,6 @@
     <ScrollView
             Grid.Row="1"
             Padding="20"
-            BackgroundColor="White"
             VerticalOptions="FillAndExpand">
         <VerticalStackLayout>
             <ImageButton Source="voltar_logo.png" MaximumWidthRequest="20" MaximumHeightRequest="20" VerticalOptions="Start" HorizontalOptions="Start"  Clicked="BtnVoltar_Click"  />
@@ -27,6 +26,7 @@
             <Entry 
             x:Name="nomeDonoPosto"
             Margin="15"
+            Text=" Gabriel Rodrigues"
             Placeholder="Ex: Machado de Assis"/>
 
 
@@ -38,6 +38,7 @@
 
             <Entry 
             x:Name="emailDonoPosto"
+                Text="gabriel@gmail.com"
             Margin="15"
             Placeholder="Ex: Email@email.com"/>
 
@@ -45,10 +46,12 @@
             Text="CPF ou CNPJ*"
             VerticalOptions="Center" 
             HorizontalOptions="Start" 
+                
             Margin="15"/>
 
             <Entry 
             x:Name="cpf_cnpjDonoPosto"
+                Text="12345678911"
             Margin="15"
             Placeholder="Digite CNPJ"/>
 
@@ -61,6 +64,7 @@
                 <RadioButton 
                     x:Name="rbEmail"
                     Content="Email"
+                    IsChecked="True"
                     Margin="15"/>
 
                 <RadioButton
@@ -77,6 +81,7 @@
             Margin="15"/>
             <Entry 
             x:Name="senhaDonoPosto"
+                Text="123456"
             IsPassword="True"
             Placeholder="Deve conter 6 digitos"
             Margin="15"/>
@@ -88,6 +93,7 @@
             Margin="15"/>
             <Entry 
             x:Name="confirmarSenhaDonoPosto"
+                Text="123456"
             IsPassword="True"
             Placeholder="Repita a senha"
             Margin="15"/>
@@ -98,6 +104,7 @@
             HorizontalOptions="Start"
             Margin="15"/>
             <Entry 
+                Text="23456810"
             x:Name="cepDonoPosto"
             Placeholder="cep"
             Margin="15"/>
@@ -109,6 +116,7 @@
             Margin="15"/>
             <Entry 
             x:Name="ruaEnderecoDonoPosto"
+                Text="rua leblon"
             Placeholder="Rua"
             IsReadOnly="True"
             Margin="15"/>
@@ -121,6 +129,7 @@
             <Entry 
             x:Name="numeroEnderecoDonoPosto"
             Placeholder="Numero do logradouro"
+                Text="10"
             Margin="15"/>
 
 
@@ -128,10 +137,12 @@
             Text="Cidade"
             VerticalOptions="Center" 
             HorizontalOptions="Start" 
+                
             Margin="15"/>
             <Entry 
             x:Name="cidadeEnderecoDonoPosto"
             Placeholder="Cidade"
+                Text="Rio de janeiro"
             IsReadOnly="True"
             Margin="15"/>
 
@@ -144,6 +155,7 @@
             x:Name="ufEnderecoDonoPosto"
             Placeholder="UF"
             IsReadOnly="True"
+                Text="RJ"
             Margin="15"/>
 
             <Button 

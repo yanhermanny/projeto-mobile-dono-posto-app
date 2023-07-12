@@ -6,7 +6,6 @@
     <ScrollView
             Grid.Row="1"
             Padding="20"
-            BackgroundColor="White"
             VerticalOptions="FillAndExpand">
         <VerticalStackLayout>
 
@@ -16,10 +15,11 @@
                 HorizontalOptions="Start"
                 VerticalOptions="Start"
                 MaximumHeightRequest="20"
-                MaximumWidthRequest="20" />
+                MaximumWidthRequest="20" 
+                    />
                 <Label 
             Text="Meu Posto"
-            Margin="30"
+            Margin="30,0"
             VerticalOptions="Start" 
             HorizontalOptions="Center" FontSize="Large" />
             </HorizontalStackLayout>
@@ -33,6 +33,7 @@
 
             <Entry 
             x:Name="nomePosto"
+                Text="Posto 1"
             Margin="15"
             Placeholder="Digite o nome do posto"/>
 
@@ -45,6 +46,7 @@
 
             <Entry 
             x:Name="cnpjPosto"
+                Text="12345678910112"
             Margin="15"
             Placeholder="Digite CNPJ"/>
 
@@ -57,6 +59,7 @@
             Margin="15"/>
             <Entry 
             x:Name="cepPosto"
+                Text="23540110"
             Placeholder="cep"
             Margin="15"/>
 
@@ -66,6 +69,7 @@
             HorizontalOptions="Start" 
             Margin="15"/>
             <Entry 
+                Text="Avenida Brasil"
             x:Name="ruaEnderecoPosto"
             Placeholder="Rua"
             IsReadOnly="True"
@@ -78,6 +82,7 @@
             Margin="15"/>
             <Entry 
             x:Name="numeroEnderecoPosto"
+                Text="1501"
             Placeholder="Numero do logradouro"
             Margin="15"/>
 
@@ -111,6 +116,7 @@
             Margin="15"/>
             <Entry 
             x:Name="cidadeEnderecoPosto"
+                Text="Rio de Janeiro"
             Placeholder="Cidade"
             IsReadOnly="True"
             Margin="15"/>
@@ -121,6 +127,7 @@
             HorizontalOptions="Start" 
             Margin="15"/>
             <Entry 
+                Text="RJ"
             x:Name="ufEnderecoPosto"
             Placeholder="UF"
             IsReadOnly="True"

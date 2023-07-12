@@ -6,7 +6,6 @@
     <ScrollView
             Grid.Row="1"
             Padding="20"
-            BackgroundColor="White"
             VerticalOptions="FillAndExpand">
         <VerticalStackLayout Spacing="10">
             
