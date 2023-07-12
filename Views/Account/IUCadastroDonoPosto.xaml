@@ -6,7 +6,6 @@
     <ScrollView
             Grid.Row="1"
             Padding="20"
-            BackgroundColor="White"
             VerticalOptions="FillAndExpand">
         <VerticalStackLayout>
             <ImageButton Source="voltar_logo.png" MaximumWidthRequest="20" MaximumHeightRequest="20" VerticalOptions="Start" HorizontalOptions="Start"  Clicked="BtnVoltar_Click"  />

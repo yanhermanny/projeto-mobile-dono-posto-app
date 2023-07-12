@@ -13,7 +13,15 @@ public partial class IURecuperarSenhaDonoPosto : ContentPage
 	}
     private void BtnVoltar_Click(object sender, EventArgs args)
     {
-        App.Current.MainPage = new IULoginDonoPosto();
+        if (EntryEmail.IsVisible == true)
+        {
+            App.Current.MainPage = new IULoginDonoPosto();
+        }
+        else
+        {
+            preencheTelaRecperarSenha();
+        }
+        
 
     }
 
@@ -40,10 +48,15 @@ public partial class IURecuperarSenhaDonoPosto : ContentPage
 
     protected void preencheMensagemRecperarSenha()
     {
-
+        lblMsgDigiteEmail.Text = "Uma mensagem foi enviada para gabriel@gmail.com";
+        EntryEmail.IsVisible = false;
+        btnRecuperar.IsVisible = false;
     }
     protected void preencheTelaRecperarSenha()
     {
+        lblMsgDigiteEmail.Text = "Digite seu email";
 
+        EntryEmail.IsVisible = true;
+        btnRecuperar.IsVisible = true;
     }
 }

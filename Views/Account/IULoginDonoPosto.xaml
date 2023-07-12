@@ -6,8 +6,7 @@
              Title="IULoginDonoPosto">
     <ScrollView
             Grid.Row="1"
-            Padding="20"
-            BackgroundColor="White"
+            Padding="20"            
             VerticalOptions="FillAndExpand">
         <VerticalStackLayout Spacing="10">
             <Image Source="dono_posto_logo.png" WidthRequest="150" HeightRequest="150" VerticalOptions="Start" HorizontalOptions="Center" />
@@ -38,20 +37,7 @@
                 Text="Login"
                 Clicked="Button_Login_Clicked"  
                 Margin="15, 0"/>
-           
-            <!--<controls:Label>
-                <controls:Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="Não tem uma conta? " />
-                        --><!--<Span Text="Cadastre-se" TextDecorations="Underline" TextColor="Blue">
-                            <Span.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding AbrirPaginaCommand}" CommandParameter="IUCadastroDonoPosto" />
-                            </Span.GestureRecognizers>
-                        </Span>--><!--
-                      
-                    </FormattedString>
-                </controls:Label.FormattedText>
-            </controls:Label>-->
+         
 
             <HorizontalStackLayout>
                 <Label Text="Não tem uma conta?" HorizontalOptions="Start" Margin="1,15"></Label>
